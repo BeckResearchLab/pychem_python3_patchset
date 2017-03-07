@@ -4250,7 +4250,7 @@ diff -Naur pychem-1.0/src/pychem/cpsa.py pychem-1.0.3/src/pychem/cpsa.py
 +##############################################################################
 +"""
 +
-+import asa
++from . import asa
 +import pybel
 +from .GeoOpt import GetAtomClassList, _ReadCoordinates
 +
@@ -7462,7 +7462,7 @@ diff -Naur pychem-1.0/src/pychem/GeoOpt.py pychem-1.0.3/src/pychem/GeoOpt.py
 +
 +
 +import pybel
-+import vector3d
++from . import vector3d
 +
 +import os
 +import string
@@ -10515,8 +10515,50 @@ diff -Naur pychem-1.0/src/pychem/morse.py pychem-1.0.3/src/pychem/morse.py
 +    print(len(GetMoRSE(inputmol)))
 diff -Naur pychem-1.0/src/pychem/pychem.py pychem-1.0.3/src/pychem/pychem.py
 --- pychem-1.0/src/pychem/pychem.py	2012-11-17 05:48:01.000000000 -0800
-+++ pychem-1.0.3/src/pychem/pychem.py	2017-01-20 11:03:44.684668416 -0800
-@@ -41,7 +41,7 @@
++++ pychem-1.0.3/src/pychem/pychem.py	2017-03-06 11:03:44.684668416 -0800
+@@ -19,29 +19,29 @@
+ 
+-import getmol
+-import kappa
+-import charge
+-import connectivity
+-import constitution
+-import estate
+-import geary
+-import moe
+-import molproperty
+-import moran
+-import moreaubroto
+-import topology
+-import fingerprint
+-import basak
+-import cpsa
+-import geometric
+-import bcut
+-import morse
+-import rdf
+-import whim
++from . import getmol
++from . import kappa
++from . import charge
++from . import connectivity
++from . import constitution
++from . import estate
++from . import geary
++from . import moe
++from . import molproperty
++from . import moran
++from . import moreaubroto
++from . import topology
++from . import fingerprint
++from . import basak
++from . import cpsa
++from . import geometric
++from . import bcut
++from . import morse
++from . import rdf
++from . import whim
+ import pybel
  
  from rdkit import Chem
  import string
